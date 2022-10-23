@@ -1,0 +1,22 @@
+{
+  "name": "statistics",
+  "version": "1.0.0",
+  "description": "A simple statistics API that tracks usage of my tools.",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NerdyTechy/Statistics.git"
+  },
+  "author": "NerdyTechy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NerdyTechy/Statistics/issues"
+  },
+  "homepage": "https://github.com/NerdyTechy/Statistics#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
