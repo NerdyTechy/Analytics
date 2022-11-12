@@ -19,9 +19,7 @@ const pool = mysql.createPool({
 /**
  * Generate database table if it doesn't already exist.
  */
-function initDatabase() {
-    pool.query("CREATE TABLE IF NOT EXISTS `statistics` (`id` BIGINT NOT NULL AUTO_INCREMENT, `identifier` VARCHAR(64), `service` TINYTEXT, `initialService` TINYTEXT, `launches` BIGINT, `lastLaunch` TIMESTAMP, PRIMARY KEY (`id`));");
-}
+function initDatabase() { pool.query("CREATE TABLE IF NOT EXISTS `statistics` (`id` BIGINT NOT NULL AUTO_INCREMENT, `identifier` VARCHAR(64), `service` TINYTEXT, `initialService` TINYTEXT, `launches` BIGINT, `lastLaunch` TIMESTAMP, PRIMARY KEY (`id`));"); }
 
 /**
  * Adds a new Melody client to the database, or updates it if it already exists.
