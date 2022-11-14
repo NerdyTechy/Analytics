@@ -1,13 +1,13 @@
-const mysql = require("mysql2");
-const moment = require("moment");
+let mysql = require("mysql2");
+let moment = require("moment");
 
-const host = process.env.sql_host;
-const port = process.env.sql_port;
-const user = process.env.sql_user;
-const pass = process.env.sql_pass;
-const data = process.env.sql_data;
+let host = process.env.sql_host;
+let port = process.env.sql_port;
+let user = process.env.sql_user;
+let pass = process.env.sql_pass;
+let data = process.env.sql_data;
 
-const pool = mysql.createPool({
+let pool = mysql.createPool({
     connectionLimit: 100,
     host: host,
     port: port,
@@ -39,4 +39,4 @@ function updateMelodyClient(identifier){
 module.exports = {
     initDatabase: initDatabase,
     updateMelodyClient: updateMelodyClient
-}
+};
