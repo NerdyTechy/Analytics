@@ -1,19 +1,13 @@
-let mysql = require("mysql2");
-let moment = require("moment");
+var mysql = require("mysql2");
+var moment = require("moment");
 
-let host = process.env.sql_host;
-let port = process.env.sql_port;
-let user = process.env.sql_user;
-let pass = process.env.sql_pass;
-let data = process.env.sql_data;
-
-let pool = mysql.createPool({
+var pool = mysql.createPool({
     connectionLimit: 100,
-    host: host,
-    port: port,
-    user: user,
-    password: pass,
-    database: data
+    host: process.env.sql_host,
+    port: process.env.sql_port,
+    user: process.env.sql_user,
+    password: process.env.sql_pass,
+    database: process.env.sql_data
 });
 
 /**
