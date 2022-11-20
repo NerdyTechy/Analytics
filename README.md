@@ -1,4 +1,4 @@
-# Statistics
+# Analytics
 A small express project that allows me to track usage of statistics for some of my tools.
 
 ## How it works
