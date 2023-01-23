@@ -21,11 +21,11 @@ function initDatabase() { pool.query("CREATE TABLE IF NOT EXISTS `statistics` (`
  */
 function updateMelodyClient(identifier){
     initDatabase();
-    pool.query(`SELECT * FROM statistics WHERE \`identifier\`="${identifier}";`, function (err, res) {
+    pool.query(`SELECT * FROM statistics WHERE \`identifier\`=${pool.escape(identifier)};`, function (err, res) {
         if (!res || res.length != 1){
-            pool.query(`INSERT INTO statistics (\`identifier\`, \`launches\`, \`service\`, \`initialService\`, \`lastLaunch\`) VALUES ("${identifier}", 1, "melody", "melody", "${moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')}")`);
+            pool.query(`INSERT INTO statistics (\`identifier\`, \`launches\`, \`service\`, \`initialService\`, \`lastLaunch\`) VALUES (${pool.escape(identifier)}, 1, "melody", "melody", "${moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')}")`);
         } else {
-            pool.query(`UPDATE statistics SET \`launches\`=${res[0].launches + 1},\`service\`="melody",\`lastLaunch\`="${moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')}";`);
+            pool.query(`UPDATE statistics SET \`launches\`=${res[0].launches + 1},\`service\`="melody",\`lastLaunch\`="${moment(Date.now()).format('YYYY-MM-DD HH:mm:ss')}" WHERE \`identifier\`=${pool.escape(identifier)};`);
         }
     });
 }
