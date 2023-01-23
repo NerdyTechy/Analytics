@@ -5,7 +5,9 @@
   "main": "src/app.js",
   "scripts": {
     "test": "node src/app.js",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,md}\""
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,md}\"",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "mysql2": "^3.0.1"
   },
   "devDependencies": {
+    "eslint": "^8.32.0",
     "prettier": "^2.8.3"
   }
 }

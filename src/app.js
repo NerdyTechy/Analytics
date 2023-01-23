@@ -14,4 +14,4 @@ app.all("*", (req, res) => {
     res.status(404).json({ success: false, message: "Unknown endpoint" });
 });
 
-app.listen(2028, () => console.log(`Running on port 2028.`));
+app.listen(2028, () => console.log("Running on port 2028."));
