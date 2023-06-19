@@ -26,7 +26,7 @@
     "mysql2": "^3.3.5"
   },
   "devDependencies": {
-    "eslint": "^8.42.0",
+    "eslint": "^8.43.0",
     "prettier": "^2.8.8"
   }
 }
