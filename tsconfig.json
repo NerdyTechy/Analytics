@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "jsx": "react",
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "target": "ES6",
+      "outDir": "./dist",
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": false
+    },
+    "include": ["src/**/*"],
+    "exclude": ["./dist"]
+  }

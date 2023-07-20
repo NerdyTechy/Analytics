@@ -1,0 +1,35 @@
+html,
+body {
+    height: 100%;
+}
+
+.form-setup {
+    max-width: 750px;
+    padding: 1rem;
+}
+
+.form-setup .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-setup input {
+    border-radius: 0;
+    margin: 0;
+    margin-bottom: -1px;
+}
+
+.form-setup .top {
+    margin-bottom: -1px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.form-setup .bottom {
+    margin-bottom: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.progress {
+    margin-bottom: 15px;
+}

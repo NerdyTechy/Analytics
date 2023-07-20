@@ -1,27 +1,42 @@
 {
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": "latest"
+        "ecmaVersion": "latest",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     },
     "env": {
-        "node": true
+        "node": true,
+        "es6": true
     },
-    "extends": ["eslint:recommended"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "react"
+    ],
     "rules": {
-        "semi": "error",
+        "semi": "warn",
         "quotes": ["warn", "double"],
         "no-dupe-args": "error",
         "no-dupe-else-if": "error",
-        "no-use-before-define": [
-            "error",
-            {
-                "functions": false,
-                "classes": true,
-                "variables": true,
-                "allowNamedExports": false
-            }
-        ],
         "no-unreachable-loop": "error",
         "no-unreachable": "error",
-        "no-duplicate-imports": "error"
+        "no-duplicate-imports": "error",
+        "react/jsx-uses-vars": "error",
+        "react/jsx-uses-react": "error",
+        "react/prop-types": "off",
+        "@typescript-eslint/no-explicit-any": "off"
     }
 }

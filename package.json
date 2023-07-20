@@ -1,32 +1,44 @@
 {
-  "name": "statistics",
+  "name": "analytics",
   "version": "1.0.0",
-  "description": "A simple statistics API that tracks usage of my tools.",
-  "main": "src/app.js",
+  "description": "A simple analytics API that tracks usage of self-hosted projects.",
+  "author": "NerdyTechy",
+  "license": "ISC",
+  "main": "src/app.ts",
+  "homepage": "https://github.com/NerdyTechy/Analytics#readme",
   "scripts": {
-    "test": "node src/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "tsc",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,md}\"",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NerdyTechy/Statistics.git"
+    "url": "git+https://github.com/NerdyTechy/Analytics.git"
   },
-  "author": "NerdyTechy",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NerdyTechy/Statistics/issues"
+    "url": "https://github.com/NerdyTechy/Analytics/issues"
   },
-  "homepage": "https://github.com/NerdyTechy/Statistics#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "dotenv": "^16.2.0",
     "express": "^4.18.2",
+    "express-react-views": "^0.11.0",
     "moment": "^2.29.4",
-    "mysql2": "^3.3.5"
+    "mysql2": "^3.3.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "devDependencies": {
-    "eslint": "^8.42.0",
-    "prettier": "^2.8.8"
+    "@types/bcrypt": "^5.0.0",
+    "@types/node": "^20.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint": "^8.43.0",
+    "eslint-plugin-react": "^7.32.2",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1"
   }
 }
