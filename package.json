@@ -23,7 +23,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.1",
     "moment": "^2.30.1",
-    "mysql2": "^3.11.5"
+    "mysql2": "^3.12.0"
   },
   "devDependencies": {
     "eslint": "^9.17.0",
